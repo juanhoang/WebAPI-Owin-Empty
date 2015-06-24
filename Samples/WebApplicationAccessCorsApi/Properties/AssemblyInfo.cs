@@ -1,16 +1,15 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WebApiOwinTemplateWebhost")]
+[assembly: AssemblyTitle("WebApplicationAccessCorsApi")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WebApiOwinTemplateWebhost")]
+[assembly: AssemblyProduct("WebApplicationAccessCorsApi")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -21,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("dfd0e428-334d-48ab-8274-0c13a156bdf9")]
+[assembly: Guid("ffc55a5e-3bb1-4af3-aec2-60d4ba05f692")]
 
 // Version information for an assembly consists of the following four values:
 //

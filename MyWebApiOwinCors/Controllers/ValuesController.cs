@@ -1,39 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Net.Http;
 using System.Web.Http;
 
-namespace WebApiOwinTemplateWebhost.Controllers
+namespace MyWebApiOwinCors.Controllers
 {
+    [RoutePrefix("api/vision")]
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        [Route("idcard")]
+        public IEnumerable<string> Get(HttpRequestMessage request)
         {
             return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
+        [Route("idcard")]
         public string Get(int id)
         {
-            return "value" + id;
+            return "value";
         }
-
+        
         // POST api/values
         public void Post([FromBody]string value)
         {
-            Console.WriteLine(value);
         }
 
         // PUT api/values/5
         public void Put(int id, [FromBody]string value)
         {
-            Console.WriteLine(id + value);
         }
 
         // DELETE api/values/5
         public void Delete(int id)
         {
-            Console.WriteLine(id);
         }
     }
 }
