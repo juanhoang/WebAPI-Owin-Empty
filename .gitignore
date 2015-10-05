@@ -1,3 +1,8 @@
 /WebApiOwinTemplateWebhost/obj
 /WebApiOwinTemplateWebhost/bin
 /WebApiOwinTemplateWebhost/*.user
+/packages
+/MyWebApiOwinCors/obj
+/MyWebApiOwinCors/bin
+/MyWebApiOwinCors/MyWebApiOwinCors.csproj.user
+/WebAPI-Owin-Template-Minimal.v11.suo
