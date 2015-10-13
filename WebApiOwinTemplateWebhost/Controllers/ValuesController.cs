@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rabbit.SimpleInjectorDemo.Services;
+using System;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -6,6 +7,13 @@ namespace WebApiOwinTemplateWebhost.Controllers
 {
     public class ValuesController : ApiController
     {
+        private readonly IListingService _listingService;
+
+        public ValuesController(IListingService listingService)
+        {
+            _listingService = listingService;
+        }
+
         // GET api/values
         public IEnumerable<string> Get()
         {
