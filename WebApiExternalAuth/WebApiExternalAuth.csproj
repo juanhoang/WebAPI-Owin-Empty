@@ -52,7 +52,7 @@
     <Compile Include="Configuration\ServicesConfiguration\ServicesModule.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ChallengeResult.cs" />
-    <Compile Include="Controllers\LoginData.cs" />
+    <Compile Include="Models\LoginData.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Configuration\WebApiConfig.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

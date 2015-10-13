@@ -2,7 +2,7 @@
 using System.Security.Claims;
 using Microsoft.AspNet.Identity;
 
-namespace WebApiExternalAuth.Controllers
+namespace WebApiExternalAuth.Models
 {
     public class LoginData
     {

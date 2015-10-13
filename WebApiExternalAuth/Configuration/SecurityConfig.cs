@@ -22,7 +22,8 @@ namespace WebApiExternalAuth.Configuration
             var options = new GoogleOAuth2AuthenticationOptions()
             {
                 ClientId = "592811454485-irj0ateep1jp0fukkg9obn1rm6015qrt.apps.googleusercontent.com",
-                ClientSecret = "i7AMD7wIipImrOpL7bX7IyQ7"
+                ClientSecret = "i7AMD7wIipImrOpL7bX7IyQ7",
+                Provider = new GoogleOAuth2AuthenticationProvider(),
             };
 
             app.UseGoogleAuthentication(options);

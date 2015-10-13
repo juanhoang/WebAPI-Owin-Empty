@@ -44,7 +44,9 @@
   <ItemGroup>
     <Content Include="Docs\Requirements.txt" />
     <Content Include="Docs\Setup.txt" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\IocConfig.cs" />

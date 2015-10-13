@@ -6,3 +6,6 @@
 /MyWebApiOwinCors/bin
 /MyWebApiOwinCors/MyWebApiOwinCors.csproj.user
 /WebAPI-Owin-Template-Minimal.v11.suo
+/WebApiExternalAuth/obj
+/WebApiExternalAuth/bin
+/WebApiExternalAuth/*.user

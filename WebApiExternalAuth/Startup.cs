@@ -13,9 +13,9 @@ namespace WebApiExternalAuth
         {
             var configuration = WebApiConfig.Register();
 
-            IocConfig.RegisterDependencyResolver(configuration);
+            configuration.RegisterDependencyResolver();
 
-            SecurityConfig.Configure(appBuilder);
+            appBuilder.Configure();
 
             appBuilder.UseWebApi(configuration);
         }

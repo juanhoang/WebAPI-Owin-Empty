@@ -1,8 +1,9 @@
-﻿using System.Security.Claims;
-using Rabbit.SimpleInjectorDemo.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Web.Http;
+using Rabbit.SimpleInjectorDemo.Services;
+using WebApiExternalAuth.Models;
 
 namespace WebApiExternalAuth.Controllers
 {
@@ -16,14 +17,20 @@ namespace WebApiExternalAuth.Controllers
         }
 
         // GET api/values
-        public IEnumerable<string> Get()
+        public dynamic Get()
         {
+            LoginData data = null;
+
             if (User.Identity.IsAuthenticated)
             {
-                var data = LoginData.FromIdentity(User.Identity as ClaimsIdentity);
+                data = LoginData.FromIdentity(User.Identity as ClaimsIdentity);
             }
 
-            return new string[] { "value1", "value2" };
+            return new
+                {
+                    Data = data,
+                    Mics = new List<string> { "value1", "value2" }
+                };
         }
 
         // GET api/values/5
