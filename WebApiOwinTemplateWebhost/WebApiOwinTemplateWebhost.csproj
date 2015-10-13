@@ -42,8 +42,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Docs\Requirements.txt" />
-    <Content Include="Docs\Setup.txt" />
+    <Content Include="Docs\Readme.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
