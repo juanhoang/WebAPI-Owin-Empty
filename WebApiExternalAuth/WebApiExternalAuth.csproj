@@ -44,6 +44,7 @@
   <ItemGroup>
     <Content Include="Docs\Requirements.txt" />
     <Content Include="Docs\Setup.txt" />
+    <Content Include="Index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
