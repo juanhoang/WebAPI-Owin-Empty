@@ -3,6 +3,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Facebook;
 using Microsoft.Owin.Security.Google;
 using Owin;
+using WebApiExternalAuth.Models;
 
 namespace WebApiExternalAuth.Configuration
 {
@@ -24,14 +25,14 @@ namespace WebApiExternalAuth.Configuration
             {
                 ClientId = "592811454485-irj0ateep1jp0fukkg9obn1rm6015qrt.apps.googleusercontent.com",
                 ClientSecret = "i7AMD7wIipImrOpL7bX7IyQ7",
-                Provider = new GoogleOAuth2AuthenticationProvider(),
+                Provider = new GoogleCustomAuthenticationProvider(),
             });
 
             app.UseFacebookAuthentication(new FacebookAuthenticationOptions()
             {
                 AppId = "118560908500179",
                 AppSecret = "a0650638ae246afa9d974e3a3df45deb",
-                Provider = new FacebookAuthenticationProvider()
+                Provider = new FacebookCustomAuthenticationProvider()
             });
         }
     }

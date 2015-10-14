@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace WebApiExternalAuth.Controllers
+namespace WebApiExternalAuth.Models
 {
     public class ChallengeResult : IHttpActionResult
     {
