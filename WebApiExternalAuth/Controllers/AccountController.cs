@@ -5,9 +5,20 @@ namespace WebApiExternalAuth.Controllers
     public class AccountController : ApiController
     {
         [HttpGet]
-        public IHttpActionResult Authenticate()
+        public IHttpActionResult Authenticate(string provider, string returnUrl = null)
         {
-            return new ChallengeResult("Google", "/api/Values", this.Request);
+            if (string.IsNullOrEmpty(returnUrl))
+            {
+                returnUrl = Url.Link("DefaultApi", new { controller = "Values" });
+            }
+
+            return new ChallengeResult(provider, returnUrl, Request);
+        }
+
+        [HttpGet]
+        public bool VerifyAuthentication()
+        {
+            return User.Identity.IsAuthenticated;
         }
     }
 }

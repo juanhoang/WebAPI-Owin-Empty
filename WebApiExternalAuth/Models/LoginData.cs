@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Security.Claims;
-using Microsoft.AspNet.Identity;
 
 namespace WebApiExternalAuth.Models
 {
@@ -37,7 +37,7 @@ namespace WebApiExternalAuth.Models
                 ProviderKey = providerKeyClaim.Value,
                 UserName = identity.FindFirstValue(ClaimTypes.Name),
                 Email = identity.FindFirstValue(ClaimTypes.Email),
-
+                ExternalAccessToken = identity.FindFirstValue("ExternalAccessToken"),
             };
         }
     }

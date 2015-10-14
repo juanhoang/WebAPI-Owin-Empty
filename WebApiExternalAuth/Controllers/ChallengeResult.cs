@@ -1,9 +1,9 @@
-﻿using System.Net;
+﻿using Microsoft.Owin.Security;
+using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Microsoft.Owin.Security;
 
 namespace WebApiExternalAuth.Controllers
 {
@@ -31,10 +31,14 @@ namespace WebApiExternalAuth.Controllers
         public string UserId { get; private set; }
 
         public HttpRequestMessage MessageRequest { get; private set; }
-        
+
         public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
         {
-            var properties = new AuthenticationProperties() { RedirectUri = this.RedirectUri };
+            var properties = new AuthenticationProperties()
+            {
+                RedirectUri = RedirectUri,
+            };
+
             if (UserId != null)
             {
                 properties.Dictionary[XsrfKey] = UserId;
@@ -42,8 +46,10 @@ namespace WebApiExternalAuth.Controllers
 
             MessageRequest.GetOwinContext().Authentication.Challenge(properties, AuthenticationProvider);
 
-            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.Unauthorized);
-            response.RequestMessage = MessageRequest;
+            var response = new HttpResponseMessage(HttpStatusCode.Unauthorized)
+            {
+                RequestMessage = MessageRequest
+            };
 
             return Task.FromResult(response);
         }

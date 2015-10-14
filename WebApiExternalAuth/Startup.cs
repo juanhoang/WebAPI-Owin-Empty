@@ -15,7 +15,7 @@ namespace WebApiExternalAuth
 
             configuration.RegisterDependencyResolver();
 
-            appBuilder.Configure();
+            appBuilder.ConfigureSecurity();
 
             appBuilder.UseWebApi(configuration);
         }
